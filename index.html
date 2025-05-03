@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Researcher | Your Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #93c5fd 100%);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #93c5fd, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg text-white font-sans">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <span class="text-gradient">NLP Researcher</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#about" class="hover:text-blue-200 transition">About</a>
+            <a href="#research" class="hover:text-blue-200 transition">Research</a>
+            <a href="#projects" class="hover:text-blue-200 transition">Projects</a>
+            <a href="#publications" class="hover:text-blue-200 transition">Publications</a>
+            <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+        </div>
+        <button class="md:hidden text-xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-20 md:py-32">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-gradient">Your Name</span></h1>
+                <h2 class="text-2xl md:text-3xl mb-6">NLP Graduate Researcher</h2>
+                <p class="text-lg md:text-xl opacity-90 mb-8">
+                    Passionate about natural language processing, machine learning, 
+                    and making AI understand human language better.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#research" class="px-6 py-3 bg-white text-blue-600 rounded-full font-bold hover:bg-blue-100 transition">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-white rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in" style="animation-delay: 0.2s;">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white border-opacity-20 hover-scale">
+                        <!-- Replace with your photo -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                             alt="Your Name" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 bg-blue-800 rounded-full p-4 shadow-lg">
+                        <i class="fas fa-brain text-3xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-shape">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white text-gray-800 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">About Me</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2 fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Background</h3>
+                    <p class="mb-6 text-lg">
+                        I'm a graduate researcher specializing in Natural Language Processing (NLP) 
+                        at [Your University]. My research focuses on [specific areas like machine 
+                        translation, sentiment analysis, dialogue systems, etc.].
+                    </p>
+                    <p class="mb-6 text-lg">
+                        With a strong foundation in computer science and linguistics, I bridge the gap 
+                        between theoretical models and practical applications in language technology.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">NLP</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Machine Learning</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Deep Learning</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Computational Linguistics</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Python</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">PyTorch</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800">
+                        Download CV <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="md:w-1/2 fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Education</h3>
+                    <div class="space-y-6">
+                        <div class="card-glass p-6 rounded-xl hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-graduation-cap text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">PhD in Computer Science</h4>
+                                    <p class="text-blue-700">[Your University] | 20XX - Present</p>
+                                    <p class="mt-2">Thesis: [Your Thesis Title]</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-glass p-6 rounded-xl hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-university text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">MSc in Artificial Intelligence</h4>
+                                    <p class="text-blue-700">[Your University] | 20XX - 20XX</p>
+                                    <p class="mt-2">Specialization: Natural Language Processing</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-glass p-6 rounded-xl hover-scale">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-laptop-code text-blue-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">BSc in Computer Science</h4>
+                                    <p class="text-blue-700">[Your University] | 20XX - 20XX</p>
+                                    <p class="mt-2">Minor: Linguistics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">Research Interests</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Research Interest 1 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Language Models</h3>
+                    <p class="text-gray-700">
+                        Investigating transformer-based architectures and their applications 
+                        in understanding and generating human language.
+                    </p>
+                </div>
+                
+                <!-- Research Interest 2 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Dialogue Systems</h3>
+                    <p class="text-gray-700">
+                        Developing conversational agents that can engage in meaningful, 
+                        context-aware interactions with humans.
+                    </p>
+                </div>
+                
+                <!-- Research Interest 3 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in" style="animation-delay: 0.4s;">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Sentiment Analysis</h3>
+                    <p class="text-gray-700">
+                        Exploring advanced techniques for emotion and opinion mining 
+                        from textual data across different domains.
+                    </p>
+                </div>
+                
+                <!-- Research Interest 4 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Machine Translation</h3>
+                    <p class="text-gray-700">
+                        Improving neural machine translation systems with focus on 
+                        low-resource languages and domain adaptation.
+                    </p>
+                </div>
+                
+                <!-- Research Interest 5 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Question Answering</h3>
+                    <p class="text-gray-700">
+                        Building systems that can comprehend questions and retrieve 
+                        accurate answers from large knowledge bases.
+                    </p>
+                </div>
+                
+                <!-- Research Interest 6 -->
+                <div class="card-glass p-8 rounded-xl hover-scale fade-in" style="animation-delay: 0.4s;">
+                    <div class="text-blue-700 mb-4 text-4xl">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">AI Ethics</h3>
+                    <p class="text-gray-700">
+                        Examining bias, fairness, and ethical considerations in NLP 
+                        systems and their societal impacts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3">
+                            <div class="bg-blue-100 aspect-video rounded-lg overflow-hidden">
+                                <!-- Project thumbnail or icon -->
+                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" 
+                                     alt="Project 1" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Multilingual Chatbot</h3>
+                            <p class="text-gray-700 mb-4">
+                                A transformer-based conversational agent capable of handling 
+                                multiple languages with context-aware responses.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">PyTorch</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">HuggingFace</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">NLP</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3">
+                            <div class="bg-blue-100 aspect-video rounded-lg overflow-hidden">
+                                <!-- Project thumbnail or icon -->
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                     alt="Project 2" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Medical Text Summarization</h3>
+                            <p class="text-gray-700 mb-4">
+                                An abstractive summarization system for clinical notes using 
+                                domain-adapted BERT models with medical entity recognition.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">TensorFlow</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">BioBERT</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Clinical NLP</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3">
+                            <div class="bg-blue-100 aspect-video rounded-lg overflow-hidden">
+                                <!-- Project thumbnail or icon -->
+                                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                                     alt="Project 3" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Low-Resource MT</h3>
+                            <p class="text-gray-700 mb-4">
+                                A neural machine translation framework optimized for 
+                                languages with limited parallel corpora using transfer learning.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Fairseq</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Transformer</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">NMT</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in" style="animation-delay: 0.6s;">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/3">
+                            <div class="bg-blue-100 aspect-video rounded-lg overflow-hidden">
+                                <!-- Project thumbnail or icon -->
+                                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                                     alt="Project 4" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">Bias Detection Toolkit</h3>
+                            <p class="text-gray-700 mb-4">
+                                A comprehensive framework for identifying and mitigating 
+                                biases in language models across different demographic groups.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Python</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">HuggingFace</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">AI Ethics</span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">Fairness</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-600 hover:text-white transition">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">Recent Publications</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- Publication 1 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-blue-100 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                                <i class="fas fa-file-alt text-5xl text-blue-700"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">
+                                <a href="#" class="hover:underline">Title of Your Conference Paper</a>
+                            </h3>
+                            <p class="text-gray-700 mb-2">
+                                <span class="font-semibold">Your Name</span>, Co-author Name, Another Author
+                            </p>
+                            <p class="text-blue-700 mb-3">
+                                ACL 2023 | Main Conference
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                This paper presents a novel approach to solving [problem] in NLP by 
+                                introducing [method] which demonstrates significant improvements over 
+                                existing baselines.
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-pdf"></i> PDF
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-quote-right"></i> Cite
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-blue-100 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                                <i class="fas fa-book text-5xl text-blue-700"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">
+                                <a href="#" class="hover:underline">Title of Your Journal Article</a>
+                            </h3>
+                            <p class="text-gray-700 mb-2">
+                                <span class="font-semibold">Your Name</span>, Co-author Name
+                            </p>
+                            <p class="text-blue-700 mb-3">
+                                Computational Linguistics | Volume 48, Issue 3
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                We investigate [phenomenon] in multilingual settings, providing 
+                                comprehensive analysis and proposing [solution] that addresses 
+                                challenges in [specific area].
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-pdf"></i> PDF
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-database"></i> Data
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-quote-right"></i> Cite
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 3 -->
+                <div class="card-glass p-6 rounded-xl hover-scale fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <div class="bg-blue-100 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                                <i class="fas fa-file-alt text-5xl text-blue-700"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-2 text-blue-800">
+                                <a href="#" class="hover:underline">Title of Your Workshop Paper</a>
+                            </h3>
+                            <p class="text-gray-700 mb-2">
+                                <span class="font-semibold">Your Name</span>, Co-author Name, Another Author
+                            </p>
+                            <p class="text-blue-700 mb-3">
+                                EMNLP 2022 | Workshop on [Specific Topic]
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Our work explores [specific aspect] of [general topic], introducing 
+                                [dataset/method] that enables researchers to [achieve something].
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-file-pdf"></i> PDF
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fas fa-quote-right"></i> Cite
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-600 hover:text-white transition">
+                    View All Publications <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-800">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 fade-in">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-800">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <a href="mailto:your.email@university.edu" class="text-blue-600 hover:underline">your.email@university.edu</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Address</h4>
+                                <p class="text-gray-700">Department of Computer Science<br>
+                                [Your University Name]<br>
+                                City, Country</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-share-alt text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Social & Profiles</h4>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl">
+                                        <i class="fab fa-google-scholar"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 text-2xl">
+                                        <i class="ai ai-semantic-scholar"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-800">Send Me a Message</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium text-gray-700">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium text-gray-700">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium text-gray-700">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Your Name</h3>
+                    <p class="opacity-80">NLP Graduate Researcher</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-xl hover:text-blue-300 transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-blue-300 transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-blue-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-blue-300 transition">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center opacity-80">
+                <p>&copy; 2023 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Mobile menu toggle (would need implementation)
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
