@@ -36,82 +36,72 @@
 </head>
 <body class="min-h-screen gradient-bg text-gray-800 font-sans">
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-20 md:py-32 flex flex-col items-center justify-center text-center">
-        <!-- Profile Image -->
-        <div class="relative mb-8 fade-in">
-            <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-800">
-                <img src="https://avatars.githubusercontent.com/u/109934854?v=4" 
-                     alt="Jaehyeok Lee" class="w-full h-full object-cover">
-            </div>
-        </div>
+    <main class="container mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center md:items-start justify-center gap-12 text-center md:text-left">
+  
+  <!-- Left Side: Text Info -->
+  <div class="flex-1 space-y-6 fade-in">
+    <!-- Name & Title -->
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">
+        <span class="text-gradient">Jaehyeok Lee | 이재혁</span>
+      </h1>
+      <h2 class="text-xl md:text-2xl text-blue-900 opacity-90">
+        NLP & AI Researcher at Sungkyunkwan University
+      </h2>
+    </div>
 
-        <!-- Name & Title -->
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">
-            <span class="text-gradient">Jaehyeok Lee | 이재혁</span>
-        </h1>
-        <h2 class="text-xl md:text-2xl text-blue-900 opacity-90 mb-6 fade-in" style="animation-delay: 0.2s;">
-            NLP & AI Researcher at Sungkyunkwan University
-        </h2>
+    <!-- Introduction -->
+    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+      I research reasoning and value alignment in large language models. My recent work includes self-training frameworks and safety analysis of LLMs' value alignment.
+    </p>
 
-        <!-- Introduction -->
-        <div class="max-w-2xl mx-auto mb-6 fade-in" style="animation-delay: 0.4s;">
-            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                I research reasoning and value alignment in large language models. My recent work includes self-training frameworks and safety analysis of LLMs' value alignment.
-            </p>
-        </div>
+    <!-- Social Links -->
+    <div class="flex flex-wrap justify-start gap-4 text-2xl text-blue-800">
+      <a href="https://scholar.google.com/citations?user=1jTEW94AAAAJ" class="hover:text-blue-600 transition" title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="https://twitter.com/jaehyeoklee2122" class="hover:text-blue-600 transition" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jaehyeok-lee-586282251" class="hover:text-blue-600 transition" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:hjl8708@skku.edu" class="hover:text-blue-600 transition" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/JaehyeokLee-119" class="hover:text-blue-600 transition" title="GitHub">
+        <i class="fab fa-github"></i> <span class="ml-1 text-sm hidden md:inline">GitHub</span>
+      </a>
+      <a href="https://raw.githubusercontent.com/JaehyeokLee-119/jaehyeokLee-119/main/Curriculum_vitae_JaehyeokLee.pdf" download class="hover:text-blue-600 transition" title="Download CV">
+        <i class="fas fa-download"></i> <span class="ml-1 text-sm hidden md:inline">Download CV</span>
+      </a>
+    </div>
 
-        <!-- "See More" Scroll Button -->
-        <div class="fade-in mb-12" style="animation-delay: 0.5s;">
-            <a href="#details" class="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
-                See More ↓
-            </a>
-        </div>
+    <!-- Current Status -->
+    <div class="card-glass mt-6 p-4 rounded-lg">
+      <p class="text-sm md:text-base">
+        <i class="fas fa-map-marker-alt mr-2"></i> Based in South Korea
+        <span class="mx-2">•</span>
+        <i class="fas fa-university mr-2"></i> Ph.D. Student at Sungkyunkwan University
+      </p>
+    </div>
 
-        <!-- Quick Links -->
-<!--         <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in" style="animation-delay: 0.6s;"> -->
-<!--             <a href="https://example.com/publications" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition flex items-center"> -->
-<!--                 <i class="fas fa-file-alt mr-2"></i> Publications -->
-<!--             </a> -->
-<!--             <a href="https://example.com/blog" target="_blank" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition flex items-center"> -->
-<!--                 <i class="fas fa-blog mr-2"></i> Blog -->
-<!--             </a> -->
-<!--             <a href="https://github.com/JaehyeokLee-119" target="_blank" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition flex items-center"> -->
-<!--                 <i class="fas fa-code mr-2"></i> GitHub -->
-<!--             </a> -->
-<!--         </div> -->
+    <!-- Scroll Button -->
+    <div>
+      <a href="#details" class="inline-block mt-6 px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
+        See More ↓
+      </a>
+    </div>
+  </div>
 
-        <!-- Social Links -->
-        <div class="flex space-x-6 text-2xl text-blue-800 fade-in" style="animation-delay: 0.8s;">
-            <a href="https://scholar.google.com/citations?user=1jTEW94AAAAJ" class="hover:text-blue-600 transition" title="Google Scholar">
-                <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a href="https://twitter.com/jaehyeoklee2122" class="hover:text-blue-600 transition" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jaehyeok-lee-586282251" class="hover:text-blue-600 transition" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:hjl8708@skku.edu" class="hover:text-blue-600 transition" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/JaehyeokLee-119" class="hover:text-blue-600 transition" title="GitHub">
-                <i class="fab fa-github"></i> <span class="ml-1 text-sm hidden md:inline">GitHub</span>
-            </a>
-            <!-- Download CV -->
-            <a href="https://raw.githubusercontent.com/JaehyeokLee-119/jaehyeokLee-119/main/Curriculum_vitae_JaehyeokLee.pdf" download class="hover:text-blue-600 transition" title="Download CV">
-                <i class="fas fa-download"></i> <span class="ml-1 text-sm hidden md:inline">Download CV</span>
-            </a>
-        </div>
+  <!-- Right Side: Profile Image -->
+  <div class="flex-shrink-0 fade-in">
+    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-800">
+      <img src="https://avatars.githubusercontent.com/u/109934854?v=4" alt="Jaehyeok Lee" class="w-full h-full object-cover">
+    </div>
+  </div>
+</main>
 
-        <!-- Current Status -->
-        <div class="card-glass mt-12 p-4 rounded-lg fade-in" style="animation-delay: 1s;">
-            <p class="text-sm md:text-base">
-                <i class="fas fa-map-marker-alt mr-2"></i> Based in South Korea
-                <span class="mx-2">•</span>
-                <i class="fas fa-university mr-2"></i> Ph.D. Student at Sungkyunkwan University
-            </p>
-        </div>
-    </main>
 
     <!-- Detailed Section -->
     <section id="details" class="bg-white py-20 px-6 md:px-20 text-gray-800">
