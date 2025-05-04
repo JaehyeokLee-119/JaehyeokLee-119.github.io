@@ -36,23 +36,32 @@
 </head>
 <body class="min-h-screen gradient-bg text-gray-800 font-sans">
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center md:items-start justify-center gap-12 text-center md:text-left">
+    <main class="container mx-auto px-6 py-20 md:py-24 flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-16 text-center md:text-left">
   
-  <!-- Left Side: Text Info -->
+  <!-- Left Side: Profile Image -->
+  <div class="flex-shrink-0 fade-in">
+    <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-blue-800 mx-auto md:mx-0">
+      <img src="https://avatars.githubusercontent.com/u/109934854?v=4" 
+           alt="Jaehyeok Lee" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <!-- Right Side: Text Info -->
   <div class="flex-1 space-y-6 fade-in">
     <!-- Name & Title -->
     <div>
       <h1 class="text-4xl md:text-5xl font-bold mb-2">
-        <span class="text-gradient">Jaehyeok Lee | 이재혁</span>
+        <span class="text-gradient">이재혁 | Jaehyeok Lee</span>
       </h1>
       <h2 class="text-xl md:text-2xl text-blue-900 opacity-90">
-        NLP & AI Researcher at Sungkyunkwan University
+        NLP Researcher at Sungkyunkwan University
       </h2>
     </div>
 
     <!-- Introduction -->
     <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-      I research reasoning and value alignment in large language models. My recent work includes self-training frameworks and safety analysis of LLMs' value alignment.
+      I research reasoning and value alignment in large language models. 
+        My recent work includes self-training frameworks and safety analysis of LLMs' value alignment.
     </p>
 
     <!-- Social Links -->
@@ -70,7 +79,7 @@
         <i class="fas fa-envelope"></i>
       </a>
       <a href="https://github.com/JaehyeokLee-119" class="hover:text-blue-600 transition" title="GitHub">
-        <i class="fab fa-github"></i> <span class="ml-1 text-sm hidden md:inline">GitHub</span>
+        <i class="fab fa-github"></i>
       </a>
       <a href="https://raw.githubusercontent.com/JaehyeokLee-119/jaehyeokLee-119/main/Curriculum_vitae_JaehyeokLee.pdf" download class="hover:text-blue-600 transition" title="Download CV">
         <i class="fas fa-download"></i> <span class="ml-1 text-sm hidden md:inline">Download CV</span>
@@ -78,7 +87,7 @@
     </div>
 
     <!-- Current Status -->
-    <div class="card-glass mt-6 p-4 rounded-lg">
+    <div class="card-glass mt-4 p-4 rounded-lg">
       <p class="text-sm md:text-base">
         <i class="fas fa-map-marker-alt mr-2"></i> Based in South Korea
         <span class="mx-2">•</span>
@@ -88,16 +97,9 @@
 
     <!-- Scroll Button -->
     <div>
-      <a href="#details" class="inline-block mt-6 px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
+      <a href="#details" class="inline-block mt-4 px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
         See More ↓
       </a>
-    </div>
-  </div>
-
-  <!-- Right Side: Profile Image -->
-  <div class="flex-shrink-0 fade-in">
-    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-800">
-      <img src="https://avatars.githubusercontent.com/u/109934854?v=4" alt="Jaehyeok Lee" class="w-full h-full object-cover">
     </div>
   </div>
 </main>
