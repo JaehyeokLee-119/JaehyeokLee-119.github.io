@@ -1,531 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaehyeok Lee | 이재혁</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .hero {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    }
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 9999px;
-      border: 5px solid #4f46e5;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
-    .section-title {
-      position: relative;
-      display: inline-block;
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: #1e293b;
-    }
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 50px;
-      height: 4px;
-      background: #4f46e5;
-      border-radius: 2px;
-    }
-    .link-button {
-      @apply px-6 py-3 rounded-lg text-white font-medium transition-all duration-300 shadow-md;
-    }
-    .link-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-    .card {
-      @apply bg-white p-8 rounded-xl shadow-md transition-all duration-300;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    .timeline-item {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 30px;
-    }
-    .timeline-item:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 5px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #4f46e5;
-    }
-    .timeline-item:after {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 21px;
-      width: 2px;
-      height: calc(100% - 16px);
-      background: #cbd5e1;
-    }
-    .timeline-item:last-child:after {
-      display: none;
-    }
-    .social-icon {
-      @apply text-gray-700 hover:text-indigo-600 transition-colors duration-300;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jae Lee | NLP Researcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            color: #1e3a8a;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-indigo-600">Jaehyeok Lee</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">About</a>
-        <a href="#research" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Research</a>
-        <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Experience</a>
-        <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Contact</a>
-      </div>
-      <button class="md:hidden text-gray-700">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-    <div class="fade-in">
-      <img src="https://via.placeholder.com/180" alt="Profile Picture" class="profile-pic mb-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Jaehyeok Lee (이재혁)</h1>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mb-6">
-        PhD Student in Artificial Intelligence at <span class="font-semibold text-indigo-600">SKKU (Sungkyunkwan University)</span>
-        Contents in this page should be updated later (do not trust this version)
-      </p>
-      <p class="text-lg text-gray-500 max-w-2xl mb-8">
-        Specializing in AI, NLP
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#about" class="link-button bg-indigo-600 hover:bg-indigo-700 flex items-center gap-2">
-          <i class="fas fa-user"></i> About Me
-        </a>
-        <a href="#research" class="link-button bg-purple-600 hover:bg-purple-700 flex items-center gap-2">
-          <i class="fas fa-flask"></i> My Research
-        </a>
-        <a href="https://raw.githubusercontent.com/JaehyeokLee-119/jaehyeokLee-119/main/Curriculum_vitae_JaehyeokLee.pdf" target="_blank" class="link-button bg-gray-700 hover:bg-gray-800 flex items-center gap-2">
-          <i class="fas fa-file-alt"></i> Download CV
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto py-16 px-6 space-y-20">
-
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-      <h2 class="section-title">About Me</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <p class="text-lg leading-relaxed text-gray-700 mb-6">
-            I am a passionate graduate researcher currently pursuing my Master's degree in Computer Science at the University of Example. My work focuses on developing innovative AI solutions that bridge the gap between intelligent systems and human understanding.
-          </p>
-          <p class="text-lg leading-relaxed text-gray-700 mb-6">
-            With a strong foundation in software engineering and data analysis, I approach problems with both technical rigor and creative thinking. My research interests span machine learning algorithms, natural language processing, and user-centered design.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Machine Learning</span>
-            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">AI</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">NLP</span>
-            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Reasoning</span>
-            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Cultural Alignment of LLM</span>
-          </div>
+<body class="min-h-screen gradient-bg text-gray-800 font-sans">
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-20 md:py-32 flex flex-col items-center justify-center text-center">
+        <!-- Profile Image -->
+        <div class="relative mb-8 fade-in">
+            <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-200">
+                <img src="https://via.placeholder.com/160" 
+                     alt="Jae Lee" class="w-full h-full object-cover">
+            </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">Education</h3>
-          <div class="space-y-4">
-            <div class="flex items-start">
-              <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                <i class="fas fa-graduation-cap text-indigo-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">Ph.D. in Artificial Intelligence</h4>
-                <p class="text-gray-600">SKKU | 2025 - Present</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                <i class="fas fa-graduation-cap text-indigo-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">M.S. in Artificial Intelligence</h4>
-                <p class="text-gray-600">SKKU | 2023 - 2025</p>
-                <p class="text-sm text-gray-500 mt-1">GPA: 4.26/4.5 | Research Assistant</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div class="bg-indigo-100 p-2 rounded-lg mr-4">
-                <i class="fas fa-university text-indigo-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">B.S. in Computer Science and Engineering</h4>
-                <p class="text-gray-600">SKKU | 2017 - 2023</p>
-                <p class="text-sm text-gray-500 mt-1">GPA: 3.75/4.5 | Double Major in Chemical Engineering</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Research Section -->
-    <section id="research" class="fade-in">
-      <h2 class="section-title">Research & Publications</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card">
-          <div class="flex items-center mb-4">
-            <div class="bg-indigo-100 p-3 rounded-lg mr-4">
-              <i class="fas fa-brain text-indigo-600 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold">Explainable AI for Healthcare</h3>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Developing interpretable machine learning models for clinical decision support systems. Our framework improves transparency while maintaining state-of-the-art performance.
-          </p>
-          <div class="flex items-center text-sm text-gray-500">
-            <i class="fas fa-calendar-alt mr-2"></i>
-            <span>Ongoing | Advisor: Prof. Smith</span>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="flex items-center mb-4">
-            <div class="bg-purple-100 p-3 rounded-lg mr-4">
-              <i class="fas fa-comments text-purple-600 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold">Conversational AI Agents</h3>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Research on context-aware dialogue systems that can maintain coherent, multi-turn conversations while adapting to user preferences and emotional states.
-          </p>
-          <div class="flex items-center text-sm text-gray-500">
-            <i class="fas fa-calendar-alt mr-2"></i>
-            <span>2023 | Published in AI Journal</span>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="flex items-center mb-4">
-            <div class="bg-blue-100 p-3 rounded-lg mr-4">
-              <i class="fas fa-chart-line text-blue-600 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold">Time Series Forecasting</h3>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Novel architecture combining transformers with traditional time series methods for improved financial market predictions with limited training data.
-          </p>
-          <div class="flex items-center text-sm text-gray-500">
-            <i class="fas fa-calendar-alt mr-2"></i>
-            <span>2022 | Presented at NeurIPS</span>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="flex items-center mb-4">
-            <div class="bg-green-100 p-3 rounded-lg mr-4">
-              <i class="fas fa-users text-green-600 text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold">Human-AI Collaboration</h3>
-          </div>
-          <p class="text-gray-600 mb-4">
-            Investigating design patterns for effective human-AI teamwork, focusing on trust calibration and appropriate reliance in decision-making tasks.
-          </p>
-          <div class="flex items-center text-sm text-gray-500">
-            <i class="fas fa-calendar-alt mr-2"></i>
-            <span>2021 | CHI Conference</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-8 text-center">
-        <a href="https://example.com/publications" target="_blank" class="link-button bg-indigo-600 hover:bg-indigo-700 inline-flex items-center gap-2">
-          <i class="fas fa-book-open"></i> View All Publications
-        </a>
-      </div>
-    </section>
+        <!-- Name & Title -->
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">
+            <span class="text-gradient">Jae Lee</span>
+        </h1>
+        <h2 class="text-xl md:text-2xl text-blue-900 opacity-90 mb-6 fade-in" style="animation-delay: 0.2s;">
+            NLP & AI Researcher at Sungkyunkwan University
+        </h2>
 
-    <!-- Experience Section -->
-    <section id="experience" class="fade-in">
-      <h2 class="section-title">Professional Experience</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-8">
-          <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
-            <i class="fas fa-briefcase mr-3 text-indigo-600"></i> Work Experience
-          </h3>
-          
-          <div class="timeline-item">
-            <h4 class="font-semibold text-lg text-gray-800">Research Assistant</h4>
-            <p class="text-indigo-600 mb-1">AI Research Lab, University of Example</p>
-            <p class="text-sm text-gray-500 mb-2">June 2022 - Present</p>
-            <p class="text-gray-600">
-              Lead researcher on explainable AI project. Developed novel interpretability techniques for deep learning models. Co-authored 3 conference papers.
+        <!-- Introduction -->
+        <div class="max-w-2xl mx-auto mb-6 fade-in" style="animation-delay: 0.4s;">
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                I research reasoning and value alignment in large language models. My recent work includes self-training frameworks like CREST, cultural safety evaluations in multilingual contexts, and empirical analysis on value-aligned generation.
             </p>
-          </div>
-          
-          <div class="timeline-item">
-            <h4 class="font-semibold text-lg text-gray-800">Machine Learning Intern</h4>
-            <p class="text-indigo-600 mb-1">Tech Innovations Inc.</p>
-            <p class="text-sm text-gray-500 mb-2">Summer 2021</p>
-            <p class="text-gray-600">
-              Implemented production-grade ML pipelines for customer segmentation. Reduced inference time by 40% through model optimization.
-            </p>
-          </div>
-          
-          <div class="timeline-item">
-            <h4 class="font-semibold text-lg text-gray-800">Software Developer</h4>
-            <p class="text-indigo-600 mb-1">Campus Computing Services</p>
-            <p class="text-sm text-gray-500 mb-2">2019 - 2022</p>
-            <p class="text-gray-600">
-              Full-stack development of university web applications. Mentored junior developers and conducted code reviews.
-            </p>
-          </div>
         </div>
-        
-        <div>
-          <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
-            <i class="fas fa-trophy mr-3 text-indigo-600"></i> Awards & Honors
-          </h3>
-<!--           
-          <div class="bg-white p-6 rounded-xl shadow-md mb-6">
-            <div class="flex items-start">
-              <div class="bg-yellow-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-award text-yellow-600"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-gray-800"></h4>
-                <p class="text-gray-600">University of Example | 2023</p>
-              </div>
-            </div>
-          </div> -->
-          
-          <div class="bg-white p-6 rounded-xl shadow-md mb-6">
-            <div class="flex items-start">
-              <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-medal text-blue-600"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-gray-800">Daesang Foundation Scholarship</h4>
-                <p class="text-gray-600">Daesang Foundation | 2025</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl shadow-md">
-            <div class="flex items-start">
-              <div class="bg-green-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-graduation-cap text-green-600"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-gray-800">Dean's List</h4>
-                <p class="text-gray-600">SKKU | 2022-1</p>
-              </div>
-            </div>
-          </div>
+
+        <!-- "See More" Scroll Button -->
+        <div class="fade-in mb-12" style="animation-delay: 0.5s;">
+            <a href="#details" class="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition">
+                See More ↓
+            </a>
         </div>
-      </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in" style="animation-delay: 0.6s;">
+            <a href="https://example.com/publications" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition flex items-center">
+                <i class="fas fa-file-alt mr-2"></i> Publications
+            </a>
+            <a href="https://example.com/blog" target="_blank" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition flex items-center">
+                <i class="fas fa-blog mr-2"></i> Research Blog
+            </a>
+            <a href="https://github.com/jaelee" target="_blank" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-full font-bold hover:bg-blue-50 transition flex items-center">
+                <i class="fas fa-code mr-2"></i> GitHub
+            </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex space-x-6 text-2xl text-blue-800 fade-in" style="animation-delay: 0.8s;">
+            <a href="https://scholar.google.com/citations?user=your-id" class="hover:text-blue-600 transition" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+            <a href="https://twitter.com/jaelee" class="hover:text-blue-600 transition" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com/in/jae-lee" class="hover:text-blue-600 transition" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:jae.lee@example.com" class="hover:text-blue-600 transition" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Current Status -->
+        <div class="card-glass mt-12 p-4 rounded-lg fade-in" style="animation-delay: 1s;">
+            <p class="text-sm md:text-base">
+                <i class="fas fa-map-marker-alt mr-2"></i> Based in South Korea
+                <span class="mx-2">•</span>
+                <i class="fas fa-university mr-2"></i> PhD Student at Sungkyunkwan University
+            </p>
+        </div>
+    </main>
+
+    <!-- Detailed Section -->
+    <section id="details" class="bg-white py-20 px-6 md:px-20 text-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <!-- Longer Introduction -->
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">More About Me</h2>
+            <p class="text-lg leading-relaxed mb-10">
+                My research bridges machine learning, language understanding, and human values. I’m particularly interested in how large language models can be aligned with human reasoning processes and societal norms. My work often combines self-training, consistency evaluation, and cross-cultural perspectives to improve both performance and ethical robustness of LLMs.
+            </p>
+
+            <!-- Recent Publications / Updates -->
+            <h3 class="text-2xl font-semibold text-blue-800 mb-4">Recent Updates & Publications</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><strong>[2025]</strong> “Self-Training Meets Consistency” presented at NAACL 2025 (Poster)</li>
+                <li><strong>[2025]</strong> Paper on cultural safety evaluations of LLMs submitted to ACL</li>
+                <li><strong>[2024]</strong> Released <a href="https://github.com/jaelee/CREST" class="text-blue-600 hover:underline" target="_blank">CREST</a>, an open-source framework for rationale evaluation</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade-in">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <p class="text-lg text-gray-700 mb-8">
-            I'm always interested in discussing research collaborations, speaking opportunities, or simply connecting with fellow researchers and professionals. Feel free to reach out!
-          </p>
-          
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="bg-indigo-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-envelope text-indigo-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">Email</h4>
-                <a href="mailto:jane.doe@example.com" class="text-indigo-600 hover:underline">jane.doe@example.com</a>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-map-marker-alt text-blue-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">Location</h4>
-                <p class="text-gray-600">Computer Science Department, University of Example</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="bg-purple-100 p-3 rounded-lg mr-4">
-                <i class="fas fa-clock text-purple-600"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">Office Hours</h4>
-                <p class="text-gray-600">Wednesdays 2-4pm or by appointment</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="mt-8 flex space-x-6">
-            <a href="https://linkedin.com/in/janedoe" target="_blank" class="social-icon text-2xl">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/janedoe" target="_blank" class="social-icon text-2xl">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/janedoe" target="_blank" class="social-icon text-2xl">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://scholar.google.com/janedoe" target="_blank" class="social-icon text-2xl">
-              <i class="fab fa-google"></i>
-            </a>
-          </div>
-        </div>
-        
-        <div class="bg-white p-8 rounded-xl shadow-md">
-          <h3 class="text-xl font-semibold mb-6 text-gray-800">Send Me a Message</h3>
-          <form class="space-y-4">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-            
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-            
-            <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-              <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-            </div>
-            
-            <button type="submit" class="link-button bg-indigo-600 hover:bg-indigo-700 w-full flex items-center justify-center gap-2">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Footer -->
+    <footer class="text-center py-6 text-sm text-gray-600">
+        <p>&copy; 2025 Jae Lee. All rights reserved.</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Jane Doe</h3>
-          <p class="text-gray-400">
-            Graduate researcher passionate about advancing AI technologies that benefit society through rigorous research and ethical innovation.
-          </p>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
-            <li><a href="#research" class="text-gray-400 hover:text-white transition-colors duration-300">Research</a></li>
-            <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors duration-300">Experience</a></li>
-            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Connect</h3>
-          <div class="flex space-x-4">
-            <a href="https://linkedin.com/in/janedoe" target="_blank" class="text-gray-400 hover:text-white text-xl transition-colors duration-300">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/janedoe" target="_blank" class="text-gray-400 hover:text-white text-xl transition-colors duration-300">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/janedoe" target="_blank" class="text-gray-400 hover:text-white text-xl transition-colors duration-300">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://scholar.google.com/janedoe" target="_blank" class="text-gray-400 hover:text-white text-xl transition-colors duration-300">
-              <i class="fab fa-google"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2025 Jane Doe. All rights reserved.</p>
-        <p class="mt-2 text-sm">Designed with passion for research and innovation</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <script>
-    // Back to top button
-    const backToTopButton = document.getElementById('back-to-top');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.remove('opacity-100', 'visible');
-        backToTopButton.classList.add('opacity-0', 'invisible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Form submission (placeholder)
-    const form = document.querySelector('form');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        form.reset();
-      });
-    }
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                el.style.opacity = '1';
+            });
+        });
+    </script>
 </body>
 </html>
