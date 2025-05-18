@@ -34,10 +34,11 @@
         }
     </style>
 </head>
-<body class="pt-20 min-h-screen gradient-bg text-gray-800 font-sans">
+<body id="top" class="pt-20 min-h-screen gradient-bg text-gray-800 font-sans">
   <!--  네비게이션 바 -->
   <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
     <nav class="container mx-auto flex flex-wrap justify-center gap-6 py-3 text-sm md:text-base text-blue-800 font-semibold">
+      <a href="#top" class="hover:text-blue-600 transition">Top</a>
       <a href="#recentupdates" class="hover:text-blue-600 transition">Recent Updates</a>
       <a href="#publications" class="hover:text-blue-600 transition">Publications</a>
       <a href="#education" class="hover:text-blue-600 transition">Education</a>
@@ -118,7 +119,7 @@
     <section id="details" class="bg-white py-20 px-6 md:px-20 text-gray-800">
         <div class="max-w-4xl mx-auto">
             <!-- Recent Updates -->
-            <h3 id="recentupdates" class="text-2xl font-semibold text-blue-800 mb-4">Recent Updates</h3>
+            <h3 id="recentupdates" class="scroll-mt-20 text-2xl font-semibold text-blue-800 mb-4">Recent Updates</h3>
 <!--             <ul class="list-disc list-inside text-gray-700 space-y-2"> -->
             <ul class="text-gray-700 space-y-2 mb-10">
                 <li><strong>[2025/5/16]</strong> The paper on safety analysis of value-aligned LLMs has been accepted to <strong>ACL 2025</strong></li>
@@ -198,7 +199,7 @@
             </div>
 
             <!-- Experience -->
-            <h3 id="experience" class="text-2xl font-semibold text-blue-800 mb-4">Experience</h3>
+            <h3 id="experience" class="scroll-mt-20 text-2xl font-semibold text-blue-800 mb-4">Experience</h3>
             <div class="text-gray-800 space-y-6 mb-10">
 <!--                 <div> -->
 <!--                     <p class="font-semibold"> -->
@@ -216,7 +217,7 @@
                 </div>
             </div>
             <!-- Languages -->
-            <h3 id="etc" class="text-2xl font-semibold text-blue-800 mb-4">Languages</h3>
+            <h3 id="etc" class="scroll-mt-20 text-2xl font-semibold text-blue-800 mb-4">Languages</h3>
             <ul class="text-gray-700 space-y-2 mb-10">
               <li><strong>Korean</strong>: Native</li>
               <li><strong>English</strong>: Working proficiency (used in research meetings and project collaboration) </li>
