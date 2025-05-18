@@ -18,7 +18,6 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 0 #1e3a8a; /* 글자 테두리를 억지로 그림 */
         }
         .fade-in {
             animation: fadeIn 1s ease-in;
@@ -67,8 +66,11 @@
 <!--   <div class="flex-1 space-y-6 fade-in"> -->
     <!-- Name & Title -->
     <div class="overflow-visible">
-      <h1 class="text-4xl md:text-5xl font-bold mb-2 text-gradient leading-relaxed pb-1">
-        <span class="hidden md:inline">이재혁 | </span>Jaehyeok Lee
+<!--       <h1 class="text-4xl md:text-5xl font-bold> mb-2 text-gradient  inline-block pb-1 leading-[1.4]"> -->
+        <h1 class="text-4xl md:text-5xl font-bold>
+          <span class="inline-block text-gradient pt-[2px] pb-[4px]">
+                <span class="hidden md:inline">이재혁 | </span>Jaehyeok Lee
+          </span>
       </h1>
       <h2 class="text-xl md:text-2xl text-blue-900 opacity-90">
         Ph.D. student @ SKKU (<a href="https://hli.skku.edu/" class="text-blue-700 hover:underline">HLI Lab</a>)
